@@ -12,6 +12,7 @@
         padding: 20px;
         font-size: 20px;
     }
+
     code {
         background-color: lightgray;
     }
@@ -47,11 +48,31 @@
             <td>None</td>
         </tr>
         <tr>
+            <td>modmail</td>
+            <td>[message]</td>
+            <td>Creates a modmail ticket. You can respond to the bot in DMs to talk to the mods.</td>
+            <td>None</td>
+        </tr>
+        <tr>
             <td>clean</td>
             <td>(number of messages) [member]</td>
             <td>bulk-deletes a certain number of messages. If a user is specified, it only deletes messages from that
                 user.
             </td>
+            <td>Per-channel Manage Messages</td>
+        </tr>
+        <tr>
+            <td>modsay</td>
+            <td>(message)</td>
+            <td>Sends a message. This command is designed for adding rules, for example if you don't want a specific mod
+                to be targeted due to making an unpopular announcement.
+            </td>
+            <td>Per-channel Manage Messages</td>
+        </tr>
+        <tr>
+            <td>sendembed</td>
+            <td>(title) (message)</td>
+            <td>Similar to the modsay command, but sends the message in an embed instead.</td>
             <td>Per-channel Manage Messages</td>
         </tr>
         <tr>
@@ -99,7 +120,8 @@
         <tr>
             <td>lock</td>
             <td>[channel]</td>
-            <td>Locks a channel so that users without Manage Messages given by another role will not be able to chat.</td>
+            <td>Locks a channel so that users without Manage Messages given by another role will not be able to chat.
+            </td>
             <td>Manage Channels</td>
         </tr>
         <tr>
@@ -107,6 +129,30 @@
             <td>[channel]</td>
             <td>Undoes the lock command</td>
             <td>Manage Channels</td>
+        </tr>
+        <tr>
+            <td>tag</td>
+            <td>(tags) [pings]</td>
+            <td>Sends a tag, or multiple tags.</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td>tagslist</td>
+            <td>None</td>
+            <td>List all tags in your server.</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td>tagadd</td>
+            <td>(name) (content)</td>
+            <td>Creates or edits a tag with a specific name and content.</td>
+            <td>Server-wide Manage Messages</td>
+        </tr>
+        <tr>
+            <td>tagdelete</td>
+            <td>(name)</td>
+            <td>Deletes a tag.</td>
+            <td>Server-wide Manage Messages</td>
         </tr>
     </table>
 </div>
