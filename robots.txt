@@ -1,7 +1,3 @@
 user-agent: *
 disallow: /logs
 disallow: /logs/
-
-#Discord's bot
-user-agent: discord-bot
-allow: /logs/
