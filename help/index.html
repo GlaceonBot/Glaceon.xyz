@@ -7,9 +7,13 @@
         border: 1px solid black;
         border-collapse: collapse;
     }
+
     th, td {
         padding: 20px;
         font-size: 20px;
+    }
+    code {
+        background-color: lightgray;
     }
 </style>
 <head>
@@ -20,42 +24,91 @@
     <meta property="og:title" content="Find out how to use Glaceon">
     <meta property="og:description" content="Glaceon discord bot command list and help page">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://glaceon.xyz/images/pixels-glaceon.png" />
+    <meta property="og:image" content="https://glaceon.xyz/images/pixels-glaceon.png"/>
     <meta name="theme-color" content="#add8e6">
 </head>
 <body>
 <div style="text-align: center">
-<h1>Glaceon command list</h1>
-<h3>Square brackets mean an optional argument, Parentheses mean a required argument</h3>
+    <h1>Glaceon command list</h1>
+    <h3>Square brackets mean an optional argument, Parentheses mean a required argument</h3>
 </div>
 <div style="position:relative; top:40px; display: flex; justify-content: center;">
-<table style="width:65%">
-    <tr>
-        <th>Command</th>
-        <th>Usage</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>help</td>
-        <td>(no arguments)</td>
-        <td>Links to this page</td>
-    </tr>
-    <tr>
-        <td>clean</td>
-        <td>(number of messages) [member]</td>
-        <td>bulk-deletes a certain number of messages. If a user is specified, it only deletes messages from that user.</td>
-    </tr>
-    <tr>
-        <td>warn</td>
-        <td>(member) (reason)</td>
-        <td>Send a user an official warning, ususally for breaking the rules.</td>
-    </tr>
-    <tr>
-        <td>mute</td>
-        <td></td>
-        <td>Links to this page</td>
-    </tr>
-</table>
+    <table style="width:65%">
+        <tr>
+            <th>Command</th>
+            <th style="width: 385px;">Usage</th>
+            <th>Description</th>
+            <th>Required permission</th>
+        </tr>
+        <tr>
+            <td>help</td>
+            <td>(no arguments)</td>
+            <td>Links to this page</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td>clean</td>
+            <td>(number of messages) [member]</td>
+            <td>bulk-deletes a certain number of messages. If a user is specified, it only deletes messages from that
+                user.
+            </td>
+            <td>Per-channel Manage Messages</td>
+        </tr>
+        <tr>
+            <td>warn</td>
+            <td>(member) (reason)</td>
+            <td>Send a user an official warning, ususally for breaking the rules.</td>
+            <td>Server-wide Manage Messages</td>
+        </tr>
+        <tr>
+            <td>mute</td>
+            <td>(member) [duration] (reason)</td>
+            <td>Mutes a member so they cannot send messages for a certaion duration, and notifies them of the reason.
+                Valid duration entries are #t where t can be <code>s</code> (seconds), <code>m</code> (minutes),
+                <code>h</code> (hours), <code>d</code> (days), <code>w</code> (weeks), or <code>y</code> (years).
+            </td>
+            <td>Server-wide Manage Messages</td>
+        </tr>
+        <tr>
+            <td>unmute</td>
+            <td>(member)</td>
+            <td>Undoes the actions of the mute command.</td>
+            <td>Server-wide Manage Messages</td>
+        </tr>
+        <tr>
+            <td>kick</td>
+            <td>(member) [reason]</td>
+            <td>Removes a member from your server until they rejoin with another invite link.</td>
+            <td>Kick Members</td>
+        </tr>
+        <tr>
+            <td>ban</td>
+            <td>(member) [duration] (reason)</td>
+            <td>Removes a member and bans them so they cannot rejoin, and notifies them of the reason.
+                Valid duration entries are #t where t can be <code>s</code> (seconds), <code>m</code> (minutes),
+                <code>h</code> (hours), <code>d</code> (days), <code>w</code> (weeks), or <code>y</code> (years).
+            </td>
+            <td>Ban Members</td>
+        </tr>
+        <tr>
+            <td>pardon</td>
+            <td>(member)</td>
+            <td>Removes a ban from a user so they can rejoin if they have another invite link.</td>
+            <td>Ban Members</td>
+        </tr>
+        <tr>
+            <td>lock</td>
+            <td>[channel]</td>
+            <td>Locks a channel so that users without Manage Messages given by another role will not be able to chat.</td>
+            <td>Manage Channels</td>
+        </tr>
+        <tr>
+            <td>unlock</td>
+            <td>[channel]</td>
+            <td>Undoes the lock command</td>
+            <td>Manage Channels</td>
+        </tr>
+    </table>
 </div>
 </body>
 </html>
