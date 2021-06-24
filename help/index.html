@@ -44,14 +44,14 @@
         <tr>
             <td>help</td>
             <td>(no arguments)</td>
-            <td>Links to this page</td>
-            <td>None</td>
+            <td>Links to this page if invoker has manage messages, else sends help for tag commands</td>
+            <td>Manage Messages/None</td>
         </tr>
         <tr>
             <td>ping</td>
             <td>(no arguments)</td>
             <td>Gets Glaceon's latency</td>
-            <td>None</td>
+            <td>Manage Messages</td>
         </tr>
         <tr>
             <td>modmail</td>
@@ -143,22 +143,16 @@
             <td>None</td>
         </tr>
         <tr>
-            <td>tagslist</td>
-            <td>None</td>
-            <td>List all tags in your server.</td>
-            <td>None</td>
-        </tr>
-        <tr>
             <td>tagadd</td>
             <td>(name) (content)</td>
             <td>Creates or edits a tag with a specific name and content.</td>
             <td>Server-wide Manage Messages</td>
         </tr>
         <tr>
-            <td>tagdelete</td>
-            <td>(name)</td>
-            <td>Deletes a tag.</td>
-            <td>Server-wide Manage Messages</td>
+            <td>tagslist</td>
+            <td>None</td>
+            <td>List all tags in your server.</td>
+            <td>None</td>
         </tr>
         <tr>
             <td>tagdelete</td>
@@ -173,18 +167,37 @@
                 <tr>
                     <th>option</th>
                     <th>effect</th>
+                    <th>arguments</th>
                 </tr>
                 <tr>
                     <td>logging</td>
                     <td>Enables Glaceon's logging module.</td>
+                    <td>on/off</td>
                 </tr>
                 <tr>
                     <td>banconfirm</td>
                     <td>Enables ban confirmations, so you have to confirm before a user is actually banned.</td>
+                    <td>on/off</td>
                 </tr>
                 <tr>
                     <td>dehoist</td>
                     <td>Enables the system to dehoist people who have names made to keep them at the top of the user list.</td>
+                    <td>on/off</td>
+                </tr>
+                <tr>
+                    <td>whitelisted_invites</td>
+                    <td>Enables the system to automatically remove all invites that are not approved.</td>
+                    <td>on/off</td>
+                </tr>
+                <tr>
+                    <td>add_whitelisted_invite</td>
+                    <td>Adds an invite to the invite whitelist.</td>
+                    <td>(Server ID)</td>
+                </tr>
+                <tr>
+                    <td>remove_whitelisted_invite</td>
+                    <td>Removes an invite from the invite whitelist.</td>
+                    <td>(Server ID)</td>
                 </tr>
             </table></td>
             <td>Administrator</td>
